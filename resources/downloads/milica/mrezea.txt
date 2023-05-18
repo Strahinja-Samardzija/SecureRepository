@@ -1,0 +1,64 @@
+Mreze 3 
+
+Na Ethernet smo se ogranicili za 2. Sloj jer je njacesci
+Moramo znati funckije 1. I 2. Sloja
+Implemenzirano na mreznoj kartici
+Istoriju sami citamo, vjerovatno ne za ispit
+U prelaznom periodu se mora kompatibilnost u nekih zadnjih 5-10 godina
+Prije bio 10-100Mbps sad 1Gbps
+Tip kodovanja 8b/10b je omogucio ove ubrzanee karaktrtistirk
+Moze i vise od 10Gbps
+I aktivna mrezna oprema mora podrzavati gigabit da bi imalo koristi pa se zato jos ne salje svima gigabit
+Na sloju mreze podataka da bi jednozmacno identkfikovali mac 
+Mrezni interfejs je mrezna kartica
+Ili port na swit hu
+Oui nam omoguci da znamo vendora
+Ostatak bajta vendor dodjeljuje uredjaju
+Na sloju veze moramo znati mac i za jost i za switch
+Ipconfig /all pokazuje mac adresu ne samo dns ip i jos nesto
+Switch ima arp protokol i mac adrsnu tabelu i onda bira kako salje
+Unicast sa jednog izvorista 1 odrediste 
+Broadcast 1 na sve u nekom mreznom okruzenju
+Multicast imamo sa 1 na grupu
+Za broadcast je destination mac ffffff sto znaci svima
+Mehanizam detekcija kolizije csma/cd omogucava
+1.osluskivanje kanala - ako sslobodan salje se ako ima kolizije - prisustva poruka na medijuma kaze se signalom da medijum nije u potpunosti na raspolaganju
+Na sloju veze podataka aktivna mrezna oprema dans iskljucivo upravljivi switchvi koje mozemo konfig
+Potrebno je spomenuti i hub ili ripiter
+Ripiter signal koji dobije na dolazni port proskijedi pohacan na odlazni port
+Koristimo i danas ripiter za realizaviju linkova gdje jmamo lokaciju
+Switchevi nisu iskljucivo L2 layer 2 vec neki imaju i L3 mogucnosti - omogucavaju rutiranje razlicitim statickim i dinamickim protokolima, imaju access liste koje omogucavaju resurse i sigurnost, ima bgp vezu sa unibeograd
+Bridge je uredjaj 2. Sloja za razliku od ripitera on radi - cita mac adrese, a switch je multiportni bridge
+Postoje dva koncepta rada switch 
+1. Primi cijeli frejm analizira header i po mac adresi bira port
+2. Iako nije cijelu frejm stigao na osnovu mac adrese bira port
+Operacije switcha na slajdu
+Switch formira mac adresnu adresu parovi port - mac adresa
+Ako switch ne prepozna mac adresu on salje broadcast i dobije odgovor informaciju da utvrdi na kojem je portu ta adresa - opet flooding operacija
+ARP protokol - dns razrhesava ip adrese i simbolicka imena
+arp ip adrese i mac adrese
+U cmd ukucamo arp /a ili /all i dobijemo arp tabelu
+Kada u mrezi cvor dobije frejm upise se par IP i Mac adrese
+U praksi zelimo neki mac naseg interfejsa - pomocu komande ping cemo to dobiti i upisati u tabelu
+Nakon predefinisanog vremena ili manuelno se brise arp tabela
+arp -a je izlistavanje tabele arp -d brisanje
+Subnet - mrezni opseg
+Na statim uredjajima npr WindowsXP moralo se pingati nekom pa se dobije mac adresa, windows 10 inicijalno salje broadcast pa se automatski popuni tabela
+
+
+Uloga STP spanning tree protocol
+Ako se greskon napravi petlja onda dodje do broadcast oluje - frejmovi se vrte u petlji i otezavaju upravljanje mac tabelom zbog stalnog upisa adresa i do dupliranja frejmova - to su problemi bridging petlje
+Rjesenje je STP u switchu je implementiran ovaj protocol mi kao administratori ako zelimo da upravljamo ovim procesom definisemo parametre kako nama odgovara, alj je moguce i da uredjaji automatski dogovore
+Situacija: imamo petlju u kojoj se moze pojaviti oluja
+Jedan nacin da se neka veza blokira po protokolu
+U centru stabla je root switch u odnosu na njega se definisu ulpge
+Ne zelimo da onaj ko bi trebalo da je glavni bude sporedni
+Ako mi ne damo najmanji id onda ce oni izabrati root preko mac adrese, a zo nije cilj jer adresu definise oui+ hex zapis redno kako se proizvodi u vendorakoj fabrici
+Swit h proizveden 2010 i 2022 ce imati razlicit mac i to stariji ce imati manju adresu pa ce biti stari los root
+Cilj je da preko protokola dormiramo stablo po svojoj mjeri 
+Automatski ce root portovi sa najmanjim port brojem c ebiti root portovi, ostali designated, svi portovi root switcha su designated jer nema sam sa sobom port
+Ako se nesto blokira blokirace se designated port
+Na internet tehnologijama detaljnije ucimo stp
+Na vjezbama obratiti paznju na logiku analize mac adresnih tabela sorce dest adresa ip i mac, to bude na ispitima
+Knjuga za 15-ak dana u biblioteci
+ 

@@ -1,0 +1,146 @@
+Mreze 7
+
+Podsjetnik: Mreze 5 imaju dio u svesci
+Server klijent obratiti paznju
+Telnet ssh za daljinski pristup
+
+Jedan od servisa aplikativnog sloja je i elektronska posta
+Kao korisnici kreiramo google nalog i zanima nas samo username i password a nije nas zanimalo koji protokol
+Nekad ce nam trebati pa da objasnimo
+Elektronska posta: arhitektura na bazi upottrebe razlocitih protokola omogucuje slanje i primanje imejlova
+Mail User Agent su posiljalac i primalac
+Dodatni Agenti za slanje poste na predajnoj i agenti za pristup poste na prijemnoj strani MTA, MDA, MAA, MSA
+Ovo smtp, pop, imap nam jos nije neophodno
+Jel ima ko od studenata da preusmjerava mejlove sa teol na gmail ili blic na gmail
+Mozemo da objedinimo vise mejl naloga u jedan pa gmail preuzima sa mejl servera teola mejlove
+Imamo i one labele od koga se salje i neke kljucne rijeci...
+Primjer komandi FTP programa za prenos fajlova
+Sa FTP-a skinemo na neki udaljeni ruter neki fajl
+Ako smo u BL a ruter na Palama moramo tamo staviti novi fajl, ruter je racunar, nema ma sebi usb, mi se ulogujemo udaljeno ssh na njega, otvorimo ftp sa serverom nq laptopu odakle administriramo ruter
+Iz CLI rutera izvrsavamo naredbu za pocetak ftp sesije i kazemo update restore restart sta vec i pravimo izmjene na fajlovima
+FileZilla sa nasegvracunara se konektujemo i preuzimamo fajlove ali preko GUI aplikacije
+Drugi je TFTP protokolo na portu 69 i UDP, in je trivijal i ne koristi TCP manje je pouzdan, npr za video streaming
+
+Snmp i ntp samo ukratko jer nam jos ne treba
+Dio client server gdje zelimo realizovati monitoring mreznih uredjaja
+Imamo Snmp klijenta da li je to uredjaj servis, zelimo da nadziremo protok ili neku funkcionalnost, ucicemo kasnije neke mibove
+Zelimo sistem sa cs arhitekturom gdje imamo server (moze virtuelna masina isto spada u server) i putem Snmp protokola pravi monitoring
+Izvucen je web interfeejs ka aplikaciji koja se zove zenos a na racunaru smo stavili sms gateway 
+Svaki dogadjaj definisan prioritetima se salje na zenos i definsu se prioriteti alarma
+Alarm moze biti pad linka, lohovanje sa neke adrese
+Na bazi ping i Snmp protokola skupljamo more podataka
+Iz zenosa je iscupana i trenutna vizuelizacija protoka na interfejsima
+Vec od ujutru u 8 sati se bude a sad u jedan je peak
+Alarm je predefinisan pa ce zenos da proslijedi sms porukom administratoru
+Ako je pao internet ne mozemo slati mejl pa zato koristimo sms ili neki bekap link
+U mrezi od 100 uredjaja tako mozemo imati tacno vrijeme kad je pao
+Mozemo ga mjeriti na zenosu to vrijeme a moze i na uredjaju
+Primjenom ntp ce svi ovi uredjaji biti na istom kloku odnosno definise referentni klok, npr. Medjunarodni ntp servis
+Ozbiljne mreze imaju potrebu zq svoj ntp server sa odgovarajucim vremenom i tacnoscu sata
+Sarnet ima izlaz na Sabcu za internet i vezu sa akademskom mrezom srbije
+Kad neko preore u Srbiji mi moramo cekati 2 sata da neko opet splajsuje
+Idealno bi bilo imati 2 manja bekapa
+I biblioteka je na sarnetu pa i njoj nestane internet kad na etf
+Jedan uredjaj odredjuje bgp peering sa provajderom ali imamo podmreze u sarnetu
+Biblioteka i fakultet imaju svaka svoj opseg javnih ip adresa a pripadaju virtuelnim lanovima
+Medjusobna komunikacija ima interni protokol rutiranja i eksterni bgp
+Imamo kampus, etf, biblioteku sve na istom
+Mi zelimo da tu mrezu ne posmatramo kao flat mrezu switch nq switch nema upravljanja ni monitoringa to je moglo u malim mrezama npr. U stanu
+Ali to ne ide u zgradi vlade, u kampusu, na etfu
+Moramo imati hijerarhijsli pristup projektovanju
+Uredjaje posmatramo na razlicitim slojevima
+Pristupni sloj sluzi da imamo switch na njemu na koji se povezuju switchevi na koje idu hostovi
+Posto imamo veliki broj ovih switcheva u jednoj zgradi necemo njih jedan na drugi vec ma distributivni sloj sa boljim i kvalitetnijim i naprednijim switchem
+Jer jedan link treba da radi sa 24 linka na nizem sloju
+Na primjeru imamo i redundansu pa imamo po link na 2 switcha distributivnog sloja a i ta 2 su povezana
+Vise je sloj jezgra mreze to je glavni switch koji ide vani
+Ovo forsira i mora biti u skladu sa odgovarajucim ISO standardima
+Ranije smo govorili o fizickoj i logickoj topologiji pa smo fizicku definisali kao fizicki nacin povezivanja nekih uredjaj
+Sad na jedan switch povezemo vlanove koji medjusobno mogu komunicirati nezaviano od nacina povezivanja switcheva ali ako koristimo konfiguracije i slojeve na odredjen nacin
+
+Strukturno kabliranje
+Kad govorimo o kablovima u objektima, zgradama o ovom govorimo
+To je definisano standardima za igradnju zgrada, razlicitih tehnickih, stambenih prostorija
+Na bazi preporuka i definicija datih dokumentima iz ove serije standarda se pristupa projektovanju i izvodjenju i to nazivamo pasivna mrezna infrastruktura
+Switche i i ruteri prave aktivnu
+Osnovne pojmove i tacke:
+Posmatrano od krajnjeg uredjaja, on se preko utp patch kabla povezuje na telekomunikacionu mikrouticnicu ili uticnicu po standardu ril3735?? govorili smo 
+Kabl se polozio sve do nekog cvorista ili lokalno mjesta koncentracije kablova
+Zavrsava u rek ormaru i odatle u topologiji zvijezde ide do duzine 100m
+Iz razloga ovog ogranicenja od cvorista do uticnice 100m na jednom spratu cesto imamo vise mjesta da bismo pokupili ili na tu tacku doveli kablove sa mjesta duzine manje od 100m
+Tih 100m nije puno ako kabl ide po coskovima pa se savija mota isl.
+Imajuci u vidu da je hijerarhisjko projektovanje onda se dalje veze ili direktno na cvoriste zgrade ili na neki uredjaj
+Mozemo imati jedno cvoriste u server sali povezano ptickim singl kablovima sa ostalim cvoristima na neogranicenu udaljenost
+Imamo fpn, kampus...
+Kabliranje moze biti u prostoriji, vertikalnoj i horizontalnoj kablovskoj instalaciji
+Vec u cvoristu zgrade imamo glavni ili distributivni svic koji ce imati opticke ili komunikacione linkove
+Ova je slika preuzeta iz standarda
+I ova druga sa 2 zgrade
+Korisnik na uticnicu na spratno svoriste za tri sprata jer su takve dimenzije zgrade da moze do 100m
+Dalje na cvoriste zgrade a bilo je i jedno lokalno cvoriste 
+Horizontalna je od korisnika do cvorista a vertikalna od cvorista do cvorista
+
+Osnovni model horizontalnog kabliranja
+Prikljucno mjesto je na zidu jedna uticnica pa se tu pqtch kablom prikljuci terminalna oprema ili uredjaj korisnika
+Od uticnice u zidu ili stolu se polaze fiksni instalacioni kqbl do mjesta koncentracije gdje je ormar sa patch panelom i u njemu uticnice
+Te su uticnice fiksno spojene na instalacioni kabl
+Onda se patch kablom prikljuci vrsta opreme switch, hub ... i na drugi kraj
+Od uticnice na panelo do one na radnom mjestu mora max 80-90 da i na krajevima bude 5m do panela i 2-3m do korisnika
+Imamo kabl kategorije 6 dobro terminiran sve uredno tad komunikacija moze i na vise od 100m ali nakon zavrsene instalacije se posmatraju parametri slqbljenje, prigusenje, duzina porta
+Jedan dio uredjaja na jedan drugi na drugi kraj i dobije se grafik za kanal
+Dobije se da je upotrebljiv ali je fail - vam standarda i onaj ko je narucilac posla moze to smatrati stetom iako se port moze koristiti
+Kad govorimo o aktivnoj mreznoj opremi spominjemo hub, ripiter, bridge, ruter, razliciti bezicni pristupni uredjaji
+Svi na port huba idu na sve ostale portove sto ne zelimo ni zbog opterecenja ni sigurnoati
+U praksi habova nema
+Ripitera ima za regeneraciju optickih signala ili cemo imati wireless ripiter koji ima hop i kroz 2 hopa napravimo link izmedju 2 tacke ojacan signal
+Bridge
+Uredjaj  3. Sloja je ruter koji obezbjedjuje usmjeravanje paketa, access liste, neke konrrolne usluge i jedan od elemenata za fizicku segmentacij umreza imamo  i L3 sviceve koji dijele funkcije rutera, imaju vlan rutiranje interno i access liste
+Kolizioni domen - moze doci do kolizije paketa
+U hubu su svi u jednom kolizionom domenu pri slanju paketa
+Seitch ima novi kolizioni domen za svaki port
+Ako svic radi kao L2 svic bez vlanova on pripada jednom emisionom odnosno broadcast paketu i moze se slati paket na broadcast adresu
+Ruter razdvaja na portovima i kolizione i emisione domene i predstavlja osnovu za fizicku segmentaciju lokalnih mreza
+Sad ruter ima fizicki odvojene mreze sa opsezima ip adresa
+On obezbjedjuje rutiranje izmedju podmreza
+Osnovne uloge rutwra iz tabele rutiranja cita pravila o usmjeravanju paketa na interfejse
+Om dobija frejm raspakuje deenkapsulira analizira adrese na 3m sloju i gleda koja je deatinaciona mreza pa u tabeli rutiranja vidi preko kojeg se interfejsa vidi ta dest. Mreza pa se paket opet enkapsulira ali sa L2 zaglavljem u frejmu koji kaze odlazis preko interfejsa tog i tog
+
+L3 uredjaji razdvajaju wmiaione domene sto nam omogucava fizicku segmentaciju
+U mrezi zelimo da imamo jako puno segmenata 
+Treba nam jako puno rutera povezanih jedan na drugi sto nam hijerarhijski ne odgovara
+Ako imamo lokalno mjesto koncentracije i 24 port switch 1 i svic 2
+Povezane na ruter
+Tu je ocigledno da je jedan svic i fizivki i logicki povezan jednom logickom segmentu
+A u praksi imamo korisnike razlicitih privilegija, potreba, karaktera i slicno pa zelimo na nivou svica izdvojiti vlanove virtuelne lanove
+Pri tom jednom vlanu pripada odredjen broj portova a drugom drugi broj
+Imamo potrebu da na razlicitim etazama u poslovnoj zgradi imamo korisnike na svicu
+Asistent A ima na prvom spratu B na trecem i oba pripadaju vlanu 5, a imamo labove neke kaatedre na razlicitim spratovima a zelimo ih sve u vlanu katedre za nesto
+Ovo se ne moze ruterom segmentisati lokalno u istoj mrezi - emisionom opsegu
+Koristimo vlanove da definisemo pripadnost
+Prvo imamo strukturnu topologiju sa mjestima koncentracije, a koristimo upravljive sviceve sa vlanovima da korisnike povezemo u grupe
+I to je neka logicka segmentacija ali nije samo to mozda
+Na svakom svicu imamo segmentaciju, a vlan10 vlan20 znaci da tom vlan10 sa mrezom 192.168.12.0 /24
+A vlan 20 192.168.50.0 /24
+Posmatramo vlan10 kao onaj svic 1 a vlan20 svic 2 na istom ruteru
+A moze i na istom svicu vise vlan sa odredjenim portovima
+Ovo kad je samo 1 vlan je lako jer ruter svakako vidi kao dvije mreze
+U drugom slucaju moramo tagovati zaglavljr u ethernet frame koji ima tag id i kaze pripada vlanu 10
+Od racunara do svica frejm nije tagovan a svic ga taguje kad vidi s kojeg je porta dosao i preko linka ga salje ruteru
+Zahvaljujuci tagovanju frejmiva je definaian vlan id i preko jednog linka saljemo saobracaj iz razlicitiv subneta i vlanova
+Ovo se zove ruter on a stik je ri izgleda ko da je svic nabio ruter na stap ili interno vlan rutiranje, a ovo moze i sa L3 svicem koji rutira izmedju vlanova
+
+Sumiramo na slici jos jednoj
+Imamo sviceve s1, s2, s3
+S2, s3 su pristuoni i imaju vlanove sa portovima na koje su povezani krajnji uredjaji
+Ovi pristupni salju frejmove sa tagova jer vlan id utiskuje svic koji ima vlan, ali primaju od racunara 
+Ova dva svica su preko veza povezani sa nadredjenim svicem koji prima 
+Trank veza jer je kao pri kraju 
+Pojam subnet i podmreza koristimo da izdvojimo adrese u opsege 
+Ali kad administriramo koristimo vlan10 terminologiju
+Onaj najljevlji ruter je ruter on a  stik i ima 2 subinterfejsa (logicka) odnosno 3
+Pa imamo fa 1.1 1.2 1.3 sa adresama i adresu default gateway adresu vlana 10 vlan20 i vlan30
+Prakticno se zna izbaciti L3 ruter a kupiti L3 svic ili ruter sa vise portova 
+Ali ovo je glavna konfiguracija za ovu raspravu o inter vlan rutiranje
+Delta, agram, zgrada vlade imamo potrebu da razlicite pravne identitete identifikujemo sa podmrezama
+Mreze slusaju svi vlanove samo internet tehnologije pa znacajan dio studenata bude ostecen za dhcp, dns, http, vlan i onda je predmet malo zaostren
+ 

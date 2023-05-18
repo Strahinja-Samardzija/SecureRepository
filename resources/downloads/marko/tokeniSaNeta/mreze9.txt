@@ -1,0 +1,172 @@
+Mreze 9
+
+Sistemi tehnicke zastite
+Jos mozda jedno ili 2 predavanja
+Ovo i bezicne mreze ce biti samo na usmenom
+Cilj je samo pomenuti neke principe, a na internet tehnologijama detaljno
+
+Danasnja tema ima malo slajdova
+Osnovni motiv je zaokruzivanje informacija 
+Imamo neke studijeske programe
+Kad budemo analizirali master studije i poslove koje rade inzenjeri, imacemo neke smjerove softver, administracija...
+
+Trenutno je primarni izbor vecine softver
+Drugi je administracija mreza i sistema, operativnih sistema
+Elektricari jake struje nije ispravan termin
+
+Sad se ne bavimo projektovanjem i izradom softvera, vec imamo inzenjere za projektovanje u sistemsku integraciji za sve ono sto je po zakonskoj regulativi neophodno za svaki objekat da postoji
+
+Imamo zgradu vlade i deltu
+Jedan profil inzenjera su elektroinzenjeri podijeljeni u 2 ili 3 grupe: elektronenergetska rjesenja - projektuju izvode (kadera, elnos), i jedan za strucni nadzor nad izvodjenjem, a prethoddno je projekat prosao reviziju
+Nakon instalacije projekat ulazi u tehnicki prijem, tek tad zgrada dobija dozvolu za koriscenje
+
+Koji su to sistemi tzv. Slabe struje
+Imamo odredjen broj knjiga i glava u knjigama
+Tako imamo i sisteme upravljanja
+Obavezni su sistemi : instalacije nekad bile racunarske i telefonske, kad govorimo o pasivnoj strukturi
+Projekat treba da definise tehnicki opis i larakteristike, crtez, pozicije uticnica, te predmet i predracun - excel tabela sa duzinom kablova kolicinom uticnica mikro rekova...
+To je osnova projekta i njegova strukturna lokalna mreza
+
+Imamo i sisteme tehnivke zastite : vatrodojava - stabilni sistem dojave pozara, stabilni sistem dojave gasa, sistem videonadzora, kontrole pristupa, evidencije radnog vrmeena, detekcije metala, pasivna i mehanicka zastita
+Investitor trazi ponude od kompanije koje ce da realizuju
+
+Ako dolazimo u banku u it sektor 
+Imamo jedan opis poslovca koji se odnosi na administraciju mreze i softvera
+Za svaki od sistema se zove inzenejr koji radi u it sektoru
+Odgovornost svih ovih sistema dojave, evidencije, detekcije je u domenu inzenjera
+Moramo bar znati nazvati firmu kojoj to autsorsujemo
+Mi smo prvi koji treba da dijagnoziramo problem
+
+Definitivno nema ljudi koji znaju i zele se baviti ovim poslom a spada u nas domen elektrotehnike
+
+Tipovi elaborata 
+Elaborat zastite od pozara - definise osnovne smjernice kako da se realizuje stabilni sistem dojavi i za gasenje pozara
+U svakoj server sali imamo ove atabilne sisteme i nasa je obaveza da definisemo pretpostavke kako ce se to realizovati
+
+Sta se stiti
+Kako se stiti
+
+Kad govorimo o dojavi pozara, protivprovali, u okviru ovih projekata se projektuje pasivna mreza, rijetko aktivna jer se moze nabaviti razlicitih dobavljaca i performansi
+O drugim sistemima uglavnom govorimo o senzorimani signalima koji se prenose do centralne jedinice
+Imamo fizicke pojave - pokret, dim, promjena n sceni
+Moze se reci da kamera ima detekciju promjene scene kao svaka kamera i saljee sliku u odgovatajucem obliku
+Tako i dojavljaci generisu signal i salju u centralu - neka jedinica za kontrolu pristupa, protivpozarne aparate...
+
+Rfi citac detektuje karticu i utvrdi se da korisnik ima pravo pristupa zoni elektromagnetni prihvatnik okine 12V i vrata se otvore
+
+Mozemo genericki uopsteno opisati za sve razlicitw susteme
+
+Pozar i provala se cesto pominju zajedno jer su i centrale cesto hibridne
+Stabilni sistem zastite od pozara je obavezan zakonski u svim javnim objektima
+Senzori ce da mjere nivo vrijednosti i proslijedice centralnoj jedinici odredjeni signal
+
+Ozbiljni sistemi imaju odgovarajuce posisteme gdje se njihovim integrisanjem dobija kompleksan sistem
+Postoje podsistemi za upravljanje bravama, protivpozarnim aparatima
+Izmedju zona imaju fizicki zidovi ali i protivpozarna vrata
+Cak i u stambenim mogu biti takva metalna vrata na mjestu gdje se razdvajaju 2 protivpozarna sektora da se ne bi prenio s jednog na drugi sektor
+
+Podsistemi drugih proizvodjaca koji dwtektuje
+Prenos alarma, izvrsne funkcije... su osnovne funkcije ovih sistema
+Pravilno se moraju i isprogramirati u centrali
+Sami detektori su osnovni elemwnt
+Ima senzorski i pretvaracki dio u el. Velicinu i dio za kondicionisanje - filtriranje, pojacanje, normalizacija signala od senzora
+
+Imamo senzor koji mjeri beku velicinu i njene parametre
+Ovo je osnov za podjelu na hemijske, mehanicke, opticke, magnetne, termicke
+
+Detektore dijelimo po vise kriterijuma
+Mora se voditi racuna o svemu sto inzenjer ugradjuje
+Ne mora napamet ali moramo da znamo sta trazimo u datasheet neke opreme
+Odemo na stranicu proizvodjaca i citamo tehnicku specifikaciju iz datasheet
+
+Govorili smo o ip zastiti
+Definise se unutrasnji i spoljasnji nivo zasticensoti uredjaja
+Ako ne ispunimo uredjaji nece raditi duze od 5 dana
+Svi uredjaji motaju da rade u zavisnoati od ambijentalnih uslova
+
+IP zastita definisana u tabeli
+Tu je eksplicitno navedeno sta podrazumjeva ip zastita - koju otpornosz ima na vlagu na kisu
+
+Imamo aktivne i pasivne detektore
+Aktivni generisu i salju energiju u okolni prostor, a pasivni zahtijevaju energiju
+RFID imamo pasivne tagove na odjeci
+Nase je da razumijemo zasto je to moguce i necemo da nas to impresionira
+U skladistu ne idemo od svakog artikla i skeniramo tagove vec da ulaskom u prostoriju prikupimo sve informacije o tagu
+Pasivni tag radi na frekvencijama koje zahtjevaju da se ocitavanje vrsi 5 do 10 cm udaljenosti
+Ovo sto je kolega kazao sve odjednom ocitava su aktivni tagovi koji salju signal na vece udaljenosti
+Kao u automobilima za naplatu putarine, ali ga moramo dopuniti novcem
+Ovaj javljac za pozar u ucionici se zove tackasti i radi tako sto se u kupastom dijelu uzirkuje nesto u zavisnosti da li je opticki javice da nema vidljivost od dima, a u kuhinji ce gledati temperaturu
+Ako imamo neku veliku halu magacin, magacinski prostor kao meridijan skladiste prema krcmaricama
+Tu imamo situaciju da se koristi nekkava hala koja je 100m sa 70m i visine 15m
+Tu ne moze tackasti vec linijski javljac
+Koji ima TX aktivni uredjaj koji emituje laserski snop, a s druge strane ili aktivni uredjaj ili ogledalo, a ovaj TX je i RX i zna mjeriti sto treba
+Pa imamo takva 4 povezana na interface 1, 2, 3, 4 koji se ukljuce na cemtralu
+Moderni sistemi koriste petlje pa ce interfejsi biti u petlji
+
+Mozda se necemo baviti ovim, ali mozda cemo morati zvati nekog ko to odrzava
+I po povrsini prostora imamo dakle podjelz detektora
+
+Na slajdu sema sa abcdefghijkl
+A automatski detekt. Pozara
+D je rucni javljac pozara
+C nekakva sirena, bljeskalica, kije su u novije vrijeme integrisane, po zakonu odredjen nivo jacina i pozicioniranje
+Vrlo cesto imaju akumulatorsko napajanje ili se napajaju sa petlje centrale
+L imamo mrezno i akumulatorsko napajanje, cilj je da se obezbijede 72casa kontinuiranog rada 
+Neki telefonski pozivnik se aktivira na alarm i salje poruku na broj osobe zaduzene za sistem, vatrogasne jedinice
+Kompanije kao sector security imaju prijemnik alarma sa razlicitih kanala sa 10tine ovakvih sistema
+Neki uredjaj ili neki izlaz centrale sa kojeg se uzima signal da senokine neki drugi sistem u ovom slucaju za pzar, u server salama vazno isto protiv pozara
+
+Vidjecemo da Mtel i Lanaco server salama
+Ne smijemo gasiti vodom rec
+Ne znamo sta je skuplje oprema ili podaci
+Prema nacinu aktiviranja: tackasti linisjki, automatksi rucni, javljaci brzine promjene, javljaci granicne vrijednosti, javljaci razlike
+Ako kuhar digne poklopac pa ovo odredi povisenu ali brzo opadne za 2 sekunde onda nije pozar
+
+Imamo 10 javljaca u zoni i ako negdje dodje do prekida svi van funckije
+Zato se koriste petlje i adresibilni elementi
+Plc interfejsi su uredjaji koje mozemo programirati - npr. Imace 3 ulaza i 3 izlaza pa imati 3 linijska detektora koji ce ici na ccentralu
+Moramo programirati i parametrirati sve ovo interfejse, centrallu i detektore
+
+Imamo podjelu i kod zastite od provale slicno sve 
+Svi imaju koncept javljac centrala odluke upravljanje signalizacija
+Samo umjesto dima drtektujemo razbijanje stakla, iki ic detektori u zavisnosti kako je parametriran zna se jel alarm ili su se samo otvorila vrata dozvoljeno ima neki magnet i zadrska koliko vremena ima da deaktivira
+A na 2. Spratu nema potrebe za zadrsku jer nije nirmalno uci preko krova da se deaktivira centrala
+U zavianosti od elaborata definsiemo perimetre zastite koje je potrebno sistemom pokriti
+Imamo odgovarajuce zahtjeve koji se moraju zadovoljiti za nivo bezbjednosti
+
+Vazno da se ukaze: sve ovo imamo unutar korektno organizovane tehnicki sektor sale
+Sve je to da se korisnik upozori iako izgleda kao da je nasa
+Od samog ulaska imamo kontrolu pristupa vatrodojavu i provalu, temperatura, valznost, poplava
+Ne smije neko s prvog sprata napraviti poplavu u server sali pa imamo detketore linijeske curenja
+
+Imamo vanjske i unutrasnje detektore i perimetre zastite
+Ispod granice unutar granice na granici
+Kako nadzirati preskakanje ograde -
+Linijskim detektorima
+
+Plinovod mora biti nadziran na svqkom metru ili 100m pa to daje tacnu udaljenost od centrale gdje se desio incident
+
+I video nadzor je element tehnicke zastite koji je svakodnevno u upotrebi
+Imamo osnovnu podjelu na klasicne - analogne sisteme video nadzora
+Oni podrazumijevaju da se kamera 1 koaksijalnim kablom povezuje na uredjaj dvr koji je sada uglavnom mrezni i ima lan interfejs da mu pristupamo preko mreze
+Obicno 16 kanalni do 32 kanalni za 16 do 32 digitalnih kamera
+Osim digitalizacije radi se i kompresija, detekcija pokreta, prrepoznavanje lica i arhiviranje pa nam trebaju i duskovi
+Prvo ogranicenje je coax prenos slike do dvr duzinom trase
+Napajanje kamere moramo realizovati od k1 do k16 ili svaku kameru ili blok napajanja za svih 16
+Moramo broj diskova za arhivu na duze vrijeme
+Kvalitet nije upitan jer su kamere kvalitetne i balans izmedju kompresije i kvaliteta
+Imamo IP kamere od ip1 do n koje se ulljucuju u ip lokalnu mrezu kao svaki ip host
+Tu kameru konfigurisemo zasebno ako zelimo da definisemo rezoluciju broj frejmova upravljanje itd.
+Opcija da imamo namjenski dvr koji se koristi kao server racunar ili da kupimo server plus aplikaciju plus storage i skalabilno sirim koliko zelim i kako god zelim
+Moramo za svaku kameru 220 ili 12 ili 24 volta
+PoE svic preko poe napajanja moze da napaja kamer
+Poe napajanje koristimo slobodne pqrice od eterneta za napajanje kojim upravlja svic
+Zelim li da sve kamere ubacim u vlan7 i da im moze pristupiti samo taj i taj
+A imacu neki drugi interfejs da mu iz nekog segmenta pridjem
+Ustvari su to racunarski sistemi i uvijek im treba neka adresa pristup i zato je odgovornoat mreznog administratora
+Kontrola pristupa i radnog vremena je obicno jedan sistem
+Ne mozemo ici na svaki sprat u zgradi vlade vec nam daju karticu samo za 7mi sprat da izadjemo iz lifta
+Postoji jos jedan sistem koji u ozbiljnim sistemima predstavlja public address sistem koji osim sto postoji muzika koja se pusta integrisu se u BIS za upravljanje kretanjem korisnika u objektu
+
+
+ 
